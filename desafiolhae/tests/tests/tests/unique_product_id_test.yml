@@ -1,0 +1,6 @@
+version: 2
+
+models:
+  - name: products
+    tests:
+      - name: unique_product_id_test

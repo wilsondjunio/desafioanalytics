@@ -1,0 +1,29 @@
+version: 2
+
+sources:
+  - name: raw-data
+    schema: dev_wilson
+    description: dados processados de acordo com o modelo conceitual.
+    tables:
+      # Dimensão Endereço (Address)
+      - name: address
+      - name: countryregion
+      - name: stateprovince
+      # Dimensão Pagamento (Cartão de Crédito)        
+      - name: creditcard
+      # Dimensão Produto
+      - name: product
+      # Dimensão Cliente
+      - name: customer
+      - name: person
+      - name: store
+      # Dimensão Razão-Vendas (Pedidos)
+      - name: salesorderheadersalesreason
+      - name: salesreason
+      # Dimensão Vendedor
+      - name: employee
+      - name: salesperson
+      - name: salesterritory
+      # Fato Vendas      
+      - name: salesorderdetail
+      - name: salesorderheader

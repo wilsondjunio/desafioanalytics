@@ -1,0 +1,62 @@
+version: 2
+
+models:
+  - name: fct_orders
+    columns:
+      - name: salesorderid
+        description: Chave primária da venda.
+        tests:
+          - not_null
+      
+      - name: product_fk
+        description: Chave estrangeira do produto.
+        tests:
+          - not_null
+
+      - name: shiptoadress_fk
+        description: Chave estrangeira do endereço de entrega.
+        tests:
+          - not_null
+
+      - name: creditcard_fk
+        description: Chave estrangeira do cartão de crédito.
+
+      - name: reason_name_final
+        description: Motivo da venda.
+        tests:
+          - not_null 
+
+      - name: customer_fk
+        description: Chave estrangeira do cliente.
+        tests:
+          - not_null 
+
+      - name: unitprice
+        description: Preço unitário do produto. 
+        tests:
+          - not_null
+
+      - name: orderqty
+        description: Quantidade do produto. 
+        tests:
+          - not_null
+
+      - name: orderdate
+        description: Data da venda.
+        tests:
+          - not_null 
+
+      - name: order_status_name
+        description: Status do pedido.
+        tests:
+          - not_null
+          
+      - name: seller_fk
+        description: Chave estrangeira do vendedor.
+        tests:
+          - relationships:
+              to: ref('dim_seller')
+              field: seller_id
+
+      - name: seller_name
+        description: Nome do vendedor associado ao pedido.

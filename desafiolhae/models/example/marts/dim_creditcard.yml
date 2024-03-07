@@ -1,0 +1,18 @@
+version: 2
+
+models:
+  - name: dim_creditcard
+    columns:
+      - name: creditcard_key
+        description: Chave substituta do id cartão de crédito
+        tests:
+          - not_null   
+      - name: creditcardid
+        description: Chave natural do cartão de crédito
+        tests:
+          - unique 
+          - not_null 
+      - name: cardtype
+        description: Nome do cartão
+        tests:
+          - not_null

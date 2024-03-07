@@ -1,0 +1,25 @@
+version: 2
+
+models:
+  - name: dim_locations
+    columns:
+      - name: shiptoaddress_sk
+        description: chave substituta do endereço de entrega.
+        tests:
+          - not_null
+          - unique
+
+      - name: shiptoaddressid
+        description: id do endereço de entrega.
+        tests:
+          - not_null
+          - unique
+
+      - name: city_name
+        description: Nome da cidade.
+
+      - name: name_state
+        description: Nome do estado.
+
+      - name: country_name
+        description: Nome do pais.

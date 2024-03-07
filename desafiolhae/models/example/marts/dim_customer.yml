@@ -1,0 +1,30 @@
+version: 2
+
+models:
+  - name: dim_customer
+    columns:
+      - name: customer_sk
+        description: Chave substituta do cliente.
+        tests:
+          - unique
+          - not_null
+
+      - name: customerid
+        description: chave natural do cliente.
+        tests:
+          - not_null
+          - unique
+          
+      - name: fullname
+        description: nome completo do cliente.
+
+      - name: storebusinessentityid
+        description: Chave natural da loja.
+
+      - name: storename
+        description: nome da loja. 
+
+      - name: customer_fullname
+        description: Chave primária do cliente.
+        tests:
+          - not_null

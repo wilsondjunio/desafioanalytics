@@ -1,0 +1,15 @@
+version: 2
+
+models:
+  - name: dim_reasons
+    columns:
+      - name: salesorderid
+        description: Chave natural da venda.
+        tests:
+          - unique
+          - not_null
+
+      - name: reason_name_aggregated
+        description: Motivos para o salesorderid. Quando há mais de um motivo por id, os motivos são agregados em uma única linha.  
+        tests:
+          - not_null

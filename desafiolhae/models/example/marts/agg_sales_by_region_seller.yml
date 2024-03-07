@@ -1,0 +1,7 @@
+version: 2
+
+models:
+  - name: agg_sales_by_region_seller
+    description: Agrega vendas por região e vendedor, incluindo o total de pedidos e valor total das vendas.
+    config:
+      materialized: table

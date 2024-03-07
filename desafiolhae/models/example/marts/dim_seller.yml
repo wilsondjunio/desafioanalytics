@@ -1,0 +1,72 @@
+version: 2
+
+models:
+  - name: dim_seller
+    description: Uma dimensão que contém informações detalhadas sobre vendedores, incluindo suas métricas de desempenho e região de vendas.
+    columns:
+      - name: seller_id
+        description: Identificador único do vendedor, correspondente ao businessentityid na tabela Employee.
+        tests:
+          - unique
+          - not_null
+
+      - name: full_name
+        description: nome completo do vendedor.
+        tests:
+          - not_null
+
+      - name: jobtitle
+        description: Título do cargo do vendedor.
+        tests:
+          - not_null
+
+      - name: hiredate
+        description: Data de contratação do vendedor.
+        tests:
+          - not_null
+
+      - name: birthdate
+        description: Data de nascimento do vendedor.
+
+      - name: maritalstatus
+        description: Estado civil do vendedor.
+
+      - name: gender
+        description: Gênero do vendedor.
+
+      - name: territoryid
+        description: Identificador único do território de vendas ao qual o vendedor está associado.
+        tests:
+          - not_null
+
+      - name: territory_name
+        description: Nome do território de vendas.
+        tests:
+          - not_null
+
+      - name: countryregioncode
+        description: Código do país ou região do território de vendas.
+        tests:
+          - not_null
+
+      - name: territory_group
+        description: Grupo ou categoria do território de vendas.
+
+      - name: salesquota
+        description: Cota de vendas do vendedor.
+
+      - name: bonus
+        description: Bônus recebido pelo vendedor.
+
+      - name: commissionpct
+        description: Percentual de comissão do vendedor sobre as vendas.
+
+      - name: salesytd
+        description: Vendas do ano até a data realizadas pelo vendedor.
+        tests:
+          - not_null
+
+      - name: saleslastyear
+        description: Vendas realizadas pelo vendedor no último ano.
+        tests:
+          - not_null

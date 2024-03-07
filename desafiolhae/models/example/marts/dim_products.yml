@@ -1,0 +1,19 @@
+version: 2
+
+models:
+  - name: dim_products
+    columns:
+      - name: product_sk 
+        description: Chave substituta do produto.
+        tests:
+          - not_null
+          - unique
+      - name: productid 
+        description: Chave natural do produto.
+        tests:
+          - not_null
+          - unique
+      - name: name_product 
+        description: Nome do produto.
+        tests:
+          - not_null  
